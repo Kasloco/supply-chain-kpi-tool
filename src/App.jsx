@@ -217,7 +217,7 @@ function App() {
     setResponse('');
 
     try {
-      const result = await fetch('https://corsproxy.io/?' + encodeURIComponent('https://api.anthropic.com/v1/messages'), {
+      const result = await fetch('https://cors-anywhere.herokuapp.com/https://api.anthropic.com/v1/messages', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
