@@ -1,16 +1,82 @@
-# React + Vite
+# Supply Chain KPI Analytics Tool
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A capstone project developed for the University of Miami Master's in Business Technology program. This tool provides an interactive analytics dashboard for supply chain performance monitoring, built around a prototype dataset modeled after Tory Burch's logistics operations.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The application enables supply chain analysts and business stakeholders to explore KPIs across inbound, outbound, and inventory datasets through both visual dashboards and a natural language query interface powered by the Claude API. Instead of navigating complex spreadsheets, users can ask plain-English questions and receive data-driven answers in real time.
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Multi-dataset support** — Processes separate Inbound, Outbound, and Inventory CSV datasets simultaneously
+- **KPI dashboards** — Visualizes key metrics including vendor performance, inventory turnover, and customer fulfillment rates
+- **Natural language querying** — Integrated Claude API backend allows users to ask questions like *"Which vendor has the highest on-time delivery rate?"* and receive contextual answers
+- **University of Miami branded UI** — Clean interface built with Tailwind CSS
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend:** React (Vite), Tailwind CSS
+- **Backend / API proxy:** Node.js (in `/api`)
+- **AI integration:** Anthropic Claude API
+- **Data:** Synthetic prototype CSV datasets (Inbound, Outbound, Inventory)
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+- An Anthropic API key
+
+### Installation
+
+```bash
+git clone https://github.com/Kasloco/supply-chain-kpi-tool.git
+cd supply-chain-kpi-tool
+npm install
+```
+
+### Environment Setup
+
+Create a `.env` file in the root directory:
+
+```
+ANTHROPIC_API_KEY=your_api_key_here
+```
+
+### Running the App
+
+```bash
+npm run dev
+```
+
+The app will be available at `http://localhost:5173`.
+
+## Project Structure
+
+```
+supply-chain-kpi-tool/
+├── api/                    # Backend API proxy for Claude integration
+├── src/
+│   ├── App.jsx             # Main application component
+│   ├── App.css             # Component styles
+│   └── main.jsx            # React entry point
+├── public/
+├── *.csv                   # Prototype supply chain datasets
+└── vite.config.js
+```
+
+## Dataset
+
+The included CSV files are synthetic datasets designed to simulate real-world supply chain data:
+
+- **Inbound.csv** — Vendor shipments, lead times, and delivery performance
+- **Outbound.csv** — Order fulfillment, shipping status, and customer delivery metrics
+- **Inventory.csv** — Stock levels, turnover rates, and warehouse data
+
+## Academic Context
+
+This project was developed as a capstone for the Business Technology program at the University of Miami. It demonstrates the practical application of AI-powered analytics to real-world business operations, combining data engineering, API integration, and product thinking.
+
+## Author
+
+Jonathan Kasloco — [GitHub](https://github.com/Kasloco)
