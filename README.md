@@ -8,7 +8,7 @@ The application enables supply chain analysts and business stakeholders to explo
 
 ## Features
 
-- **Multi-dataset support** — Processes separate Inbound, Outbound, and Inventory CSV datasets simultaneously
+- **Multi-dataset support** — Processes separate inbound, outbound, and inventory CSV datasets simultaneously
 - **KPI dashboards** — Visualizes key metrics including vendor performance, inventory turnover, and customer fulfillment rates
 - **Natural language querying** — Integrated Claude API backend allows users to ask questions like *"Which vendor has the highest on-time delivery rate?"* and receive contextual answers
 - **University of Miami branded UI** — Clean interface built with Tailwind CSS
@@ -39,7 +39,7 @@ npm install
 
 Create a `.env` file in the root directory:
 
-```
+```bash
 ANTHROPIC_API_KEY=your_api_key_here
 ```
 
@@ -53,7 +53,7 @@ The app will be available at `http://localhost:5173`.
 
 ## Project Structure
 
-```
+```text
 supply-chain-kpi-tool/
 ├── api/                    # Backend API proxy for Claude integration
 ├── src/
