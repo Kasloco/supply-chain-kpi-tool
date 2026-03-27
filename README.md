@@ -79,4 +79,4 @@ This project was developed as a capstone for the Business Technology program at 
 
 ## Author
 
-Jonathan Kasloco — [GitHub](https://github.com/Kasloco)
+Jonathan Kaslow — [GitHub](https://github.com/Kasloco)
